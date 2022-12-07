@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import React from 'react';
 
 import SearchInput from "./SearchInput";
+import FilterCountry from "./FilterCountry";
 
 const AllCountries = () => {
 
@@ -48,6 +49,22 @@ const AllCountries = () => {
     }
 }
 
+    const getCountryByRegion = async(regionName) => {
+        try {
+            const res = await fetch(`${apiURL}/region/${regionName}`)
+
+            if (!res.ok) throw new Error('Region Not Applicable.......')
+
+            const data = await res.json()
+            setCountries(data)
+
+            setIsLoading(false)
+        } catch (error) {
+            setIsLoading(false)
+            setError(false)
+        }
+    }
+
     useEffect(() => {
         getAllCountries();
     }, []);
@@ -58,6 +75,10 @@ const AllCountries = () => {
             <div className='country_top'>
                 <div className="search">
                     <SearchInput onSearch={getCountryByName} />
+                </div>
+
+                <div className="filter">
+                    <FilterCountry onSelect={getCountryByRegion} />
                 </div>
             </div>
 
