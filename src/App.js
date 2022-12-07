@@ -1,7 +1,12 @@
-import './app.css';
+import React from 'react';
+import Home from './components/Home';
+
+
 
 function App() {
-    return<h1>Hello Mundo</h1>;
-}
+    return (
+        <Home />
+    )
+};
 
 export default App;
