@@ -4,6 +4,8 @@ import React from 'react';
 import SearchInput from "./SearchInput";
 import FilterCountry from "./FilterCountry";
 
+import { Link } from 'react-router-dom';
+
 const AllCountries = () => {
 
     const [countries, setCountries] = useState([])
@@ -88,6 +90,7 @@ const AllCountries = () => {
 
                 {
                     countries?.map(country => (
+                       <Link to ={`/country/${country.name.common}`}>
                         <div className="country_card">
                             <div className="country_img">
                             <img src={country.flags.png} alt="" />
@@ -101,6 +104,7 @@ const AllCountries = () => {
                             <h6> Capital: {country.capital}</h6>
                             </div>
                             </div>
+                       </Link>
             ))
                 }
         </div>

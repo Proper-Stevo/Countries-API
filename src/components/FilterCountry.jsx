@@ -9,11 +9,11 @@ const FilterCountry = ({ onSelect }) => {
     return (
         <select onChange={selectHandler}>
             <option>Filter By Region</option>
-            <option value="Africa">Africa</option>
-            <option value="America">America</option>
-            <option value="Asia">Asia</option>
-            <option value="Europe">Europe</option>
-            <option value="Oceania">Oceania</option>
+            <option className="option" value="Africa">Africa</option>
+            <option className="option" value="America">America</option>
+            <option className="option" value="Asia">Asia</option>
+            <option className="option" value="Europe">Europe</option>
+            <option className="option" value="Oceania">Oceania</option>
         </select>
     );
 };
