@@ -4,7 +4,7 @@ const SearchInput = ({ onSearch }) => {
     const [input, setInput] = useState('');
 
     const submitHandler = (e) => {
-
+        e.preventDefaul()
         onSearch(input);
     };
 

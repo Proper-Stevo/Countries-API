@@ -3,6 +3,8 @@ import { Routes, Route } from 'react-router-dom';
 import AllCountries from './AllCountries';
 import CountryInfo from './CountryInfo';
 
+
+
 const Home = () => (
     <>
         <div className='header'>

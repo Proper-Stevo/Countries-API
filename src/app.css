@@ -14,7 +14,14 @@
  }
 
  body {
-     background: hsl(208, 20%, 17%);
+     background-color: black;
+     color: black;
+ }
+
+ .dark-mode {
+    background-color: black;
+    color: white;
+    justify-content: end;
  }
 
  .header {

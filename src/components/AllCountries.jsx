@@ -34,9 +34,9 @@ const AllCountries = () => {
         }
     };
 
-    const getCountryByName = async (countryName) => {
+    const getCountryByName = async (name) => {
         try {
-        const res = await fetch(`${apiURL}/name/${countryName}`)
+        const res = await fetch(`${apiURL}/name/${name}`)
 
         if (!res.ok) throw new Error('Country Not Found!')
 
