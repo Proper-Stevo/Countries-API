@@ -29,7 +29,6 @@ const AllCountries = () => {
             setIsLoading(false)
 
         } catch (error) {
-
             setIsLoading(false)
             setError(error.message)
         }
@@ -39,7 +38,7 @@ const AllCountries = () => {
         try {
         const res = await fetch(`${apiURL}/name/${countryName}`)
 
-        if(!res.ok) throw new Error('Country Not Found!')
+        if (!res.ok) throw new Error('Country Not Found!')
 
         const data = await res.json()
         setCountries(data)
